@@ -9,12 +9,34 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
-            var paraula="";
+            var paraula= "";
             var vides = 7;
             var lletres= "";
             function lletraCorrecta(){
                 var lletra=document.getElementById("lletra").value;
                 lletra=lletra.toLowerCase();
+                switch (lletra){
+                    case "à":
+                    case "á":
+                      lletra= "a";  
+                      break;
+                    case "è":
+                    case "é":
+                      lletra= "e";
+                      break;
+                    case "í":
+                    case "ï":
+                      lletra= "i"; 
+                      break;
+                    case "ó":
+                    case "ò":
+                      lletra= "o";
+                      break;
+                    case "ú":
+                    case "ü":
+                      lletra= "u";
+                      break;
+                }
                 if((lletra >= "a") && (lletra <= "m")){
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
@@ -24,6 +46,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                     lletres = lletres + lletra + " ";
                     document.getElementById("lletres").innerHTML= lletres;
                     vides= vides -1;
+                    if ((lletra<="a") && (lletra >="z")){
+                        window.alert("has fallat!");
+                    }
                     
                 }
                 document.getElementById("vides").innerHTML= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
@@ -31,7 +56,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                     window.alert("i has perdut :(!");
                     Aturatot();
                 }
-                if (Paraula.length >= 14){
+                if (paraula.length >= 14){
                     window.alert("i has guanyat!");
                     Aturatot();
                 }

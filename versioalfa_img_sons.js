@@ -43,10 +43,11 @@
                     window.alert("Has fallat!");
                     lletres = lletres + lletra + " ";
                     document.getElementById("lletres").innerHTML= lletres;
-                    vides= vides -1;
+                    vides = vides - 1;
+                    document.getElementById("vides").innerHTML= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
+                    mostrarImg();
                 }
-            }
-                document.getElementById("vides").innerHTML= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
+            
                 //Cream una condició que diu que si la variable vides és menor o igual a 0, has perdut i s'atura tot.
                 if(vides<=0){
                     window.alert("i has perdut :(!");
@@ -57,6 +58,7 @@
                     window.alert("i has guanyat!");
                     Aturatot();
                 }
+            }    
                 //Funció que desabilita <input id="lletra" i <button id="button"
                 function Aturatot(){
                     document.getElementById("lletra").disabled=true;
@@ -64,26 +66,42 @@
                 }
                 
                 function Amagar(){
-                    document.getElementById("imatges").hidden= true;
+                    document.getElementById("ahorcado0").hidden= true;
+                    document.getElementById("ahorcado1").hidden= true;
+                    document.getElementById("ahorcado2").hidden= true;
+                    document.getElementById("ahorcado3").hidden= true;
+                    document.getElementById("ahorcado4").hidden= true;
+                    document.getElementById("ahorcado5").hidden= true;
+                    document.getElementById("ahorcado6").hidden= true;
              }
-             switch (vides){
-                    case vides==7:
-                      ahorcado0= document.getElementById("ahorcado0").show=true;  
+                 function mostrarImg(){
+                        switch (vides){
+                    case 6:
+                        document.getElementById("ahorcado6").hidden=false;
                       break;
-                    case "è":
-                    case "é":
-                      lletra= "e";
+                    case 5:
+                        document.getElementById("ahorcado6").hidden=true;
+                        document.getElementById("ahorcado5").hidden=false;
                       break;
-                    case "í":
-                    case "ï":
-                      lletra= "i"; 
+                    case 4:
+                        document.getElementById("ahorcado5").hidden=true;
+                        document.getElementById("ahorcado4").hidden=false;
                       break;
-                    case "ó":
-                    case "ò":
-                      lletra= "o";
+                    case 3:
+                        document.getElementById("ahorcado4").hidden=true;
+                        document.getElementById("ahorcado3").hidden=false;
                       break;
-                    case "ú":
-                    case "ü":
-                      lletra= "u";
+                    case 2:
+                        document.getElementById("ahorcado3").hidden=true;
+                        document.getElementById("ahorcado2").hidden=false;
+                      break;
+                    case 1:
+                        document.getElementById("ahorcado2").hidden=true;
+                        document.getElementById("ahorcado1").hidden=false;
+                      break;
+                    case 0:
+                        document.getElementById("ahorcado1").hidden=true;
+                        document.getElementById("ahorcado0").hidden=false;
                       break;
                 }
+                    }

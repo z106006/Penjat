@@ -57,6 +57,7 @@
                 if (paraula.length >= 14){
                     window.alert("i has guanyat!");
                     Aturatot();
+                    document.getElementById("miau").innerHTML=miau;
                 }
             }    
                 //Funció que desabilita <input id="lletra" i <button id="button"
@@ -105,3 +106,4 @@
                       break;
                 }
                     }
+                   

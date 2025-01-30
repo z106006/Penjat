@@ -39,6 +39,7 @@
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
                     document.getElementById("paraula").innerHTML= paraula;
+                    miau;
                 }else{
                     window.alert("Has fallat!");
                     lletres = lletres + lletra + " ";
@@ -74,7 +75,10 @@
                     document.getElementById("ahorcado4").hidden= true;
                     document.getElementById("ahorcado5").hidden= true;
                     document.getElementById("ahorcado6").hidden= true;
-             }
+                    if (!confirm('Anam a la quinta forca?')){
+                        document.body.style.backgroundImage= "url('img/fondo1.png')";
+                    }
+                }
                  function mostrarImg(){
                         switch (vides){
                     case 6:
@@ -104,6 +108,8 @@
                         document.getElementById("ahorcado1").hidden=true;
                         document.getElementById("ahorcado0").hidden=false;
                       break;
-                }
                     }
+                }
+                
+                
                    

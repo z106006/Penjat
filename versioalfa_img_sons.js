@@ -6,6 +6,12 @@
             var paraula= "";
             var vides = 7;
             var lletres= "";
+            var seconds=0;
+	    function timer(){
+		seconds=seconds+1;
+		document.getElementById("counter").innerHTML=seconds;
+	    }
+		setInterval(timer,1000);
             //Funció que fa que digui si la lletra insertada és correcta o no.
             function lletraCorrecta(){ 
                 var lletra=document.getElementById("lletra").value;
@@ -39,7 +45,7 @@
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
                     document.getElementById("paraula").innerHTML= paraula;
-                    miau;
+                    document.getElementById("correcte").play();
                 }else{
                     window.alert("Has fallat!");
                     lletres = lletres + lletra + " ";
@@ -58,7 +64,6 @@
                 if (paraula.length >= 14){
                     window.alert("i has guanyat!");
                     Aturatot();
-                    document.getElementById("miau").innerHTML=miau;
                 }
             }    
                 //Funció que desabilita <input id="lletra" i <button id="button"

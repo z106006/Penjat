@@ -45,7 +45,7 @@
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
                     document.getElementById("paraula").innerHTML= paraula;
-                    document.getElementById("correcte").play();
+                    document.getElementById("miau").play();
                 }else{
                     window.alert("Has fallat!");
                     lletres = lletres + lletra + " ";

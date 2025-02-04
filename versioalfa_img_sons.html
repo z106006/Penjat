@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     <body onload="Amagar()" style="background-image: url('img/Desert.png');
                                    background-size: 640px 480px;
                                    background-repeat: no-repeat;">
-        <h1>Prototip Joc del Penjat</h1>
+        <h1 translate="no">Versió Alpha Joc del Penjat</h1>
         <label for="lletra"></label>
         <input id="lletra" placeholder="Escriu una lletra minúscula" maxlength="1">
         <button id="button" onclick="lletraCorrecta()">Comprova!</button>
@@ -33,7 +33,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <p>Crèdits:<a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">
         El joc del penjat on Scratch</a></p>
         
-       
+        <div id="idiomes">
+        <a href="https://spectacular-medovik-1df030.netlify.app/versioalfa_img_sons"
+           id="catala"> <img src="img/ca.png" title="En Català" alt=""/></a>
+        <a href= "https://spectacular--medovik--1df030-netlify-app.translate.goog/versioalfa_img_sons?_x_tr_sl=ca&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"
+           id="espanyol"><img src="img/es.png" alt=""/></a>
+           <a href="https://spectacular--medovik--1df030-netlify-app.translate.goog/versioalfa_img_sons?_x_tr_sl=ca&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=wapp"
+              id="frances"><img src="img/fr.png" alt=""/></a>
+        <img id="angles" src="img/gb.png" alt=""/>
+        <img id="italia" src="img/it.png" alt=""/>
+        <img id="alemany" src="img/de.png" alt=""/>
+        </div>
         <img id="caminar" src="img/caminar.gif" alt="" width="86" height="90"/>
         <div id="imatges">
         <img src="img/ahorcado_0.png"  alt="" 
@@ -59,7 +69,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
              width="280" height="270"/>
         </div>
         <audio>
-            <source id="correcte" src="img/miau.mp3">
+            <source id="miau" src="img/miau.mp3">
         </audio>
     </body>
 </html>

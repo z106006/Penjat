@@ -42,11 +42,12 @@
                 }
                 //Cream una condicional que si la lletra està dins l'interval és correcta i si no està dins, és incorrecta.
                 if((lletra >= "a") && (lletra <= "m")|| (lletra === "ç")){
+                    document.getElementById("miau").play();
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
                     document.getElementById("paraula").innerHTML= paraula;
-                    document.getElementById("miau").play();
                 }else{
+                    document.getElementById("boom").play();
                     window.alert("Has fallat!");
                     lletres = lletres + lletra + " ";
                     document.getElementById("lletres").innerHTML= lletres;

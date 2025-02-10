@@ -46,6 +46,7 @@
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
                     document.getElementById("paraula").innerHTML= paraula;
+                    document.getElementById("timer").play();
                 }else{
                     document.getElementById("boom").play();
                     window.alert("Has fallat!");
@@ -54,17 +55,29 @@
                     vides = vides - 1;
                     document.getElementById("vides").innerHTML= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
                     mostrarImg();
+                    document.getElementById("timer").play();
                 }
             
                 //Cream una condició que diu que si la variable vides és menor o igual a 0, has perdut i s'atura tot.
                 if(vides<=0){
                     window.alert("i has perdut :(!");
+                    document.getElementById("perdut").play();
                     Aturatot();
+                    window.alert("Que en pau descansi");
+                    document.getElementById("campanes").play();
+                    document.getElementById("rotar").hidden=false;
+                    document.getElementById("moix").hidden=true;
+                    document.getElementById("ahorcado").hidden=false;
+                    
                 }
                 //Feim una condició que diu que si la mida de la variable paraula és major o igual que 14, has guanyat i s'atura tot.
                 if (paraula.length >= 14){
+                    document.getElementById("guanyat").play();
                     window.alert("i has guanyat!");
                     Aturatot();
+                    document.getElementById("caminar").hidden=false;
+                    document.getElementById("moix").hidden=true;
+                    document.getElementById("ahorcado").hidden=false;
                 }
             }    
                 //Funció que desabilita <input id="lletra" i <button id="button"
@@ -81,6 +94,9 @@
                     document.getElementById("ahorcado4").hidden= true;
                     document.getElementById("ahorcado5").hidden= true;
                     document.getElementById("ahorcado6").hidden= true;
+                    document.getElementById("rotar").hidden=true;
+                    document.getElementById("caminar").hidden=true;
+                    document.getElementById("ahorcado").hidden=true;
                     if (!confirm('Anam a la quinta forca?')){
                         document.body.style.backgroundImage= "url('img/fondo1.png')";
                     }

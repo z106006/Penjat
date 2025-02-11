@@ -7,6 +7,7 @@
             var vides = 7;
             var lletres= "";
             var seconds=0;
+            //Ficam un temporitzador per veure quant de temps estàs al joc
 	    function timer(){
 		seconds=seconds+1;
 		document.getElementById("counter").innerHTML=seconds;
@@ -41,12 +42,17 @@
                       break;
                 }
                 //Cream una condicional que si la lletra està dins l'interval és correcta i si no està dins, és incorrecta.
+                //Feim que quan hem encertat soni una miulada
+                //Després fer sonar un clock
                 if((lletra >= "a") && (lletra <= "m")|| (lletra === "ç")){
                     document.getElementById("miau").play();
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
                     document.getElementById("paraula").innerHTML= paraula;
                     document.getElementById("timer").play();
+                    
+                //Fer sonar un boom si has fallat
+                //Després fer sonar un clock
                 }else{
                     document.getElementById("boom").play();
                     window.alert("Has fallat!");
@@ -59,6 +65,8 @@
                 }
             
                 //Cream una condició que diu que si la variable vides és menor o igual a 0, has perdut i s'atura tot.
+                //Quan perds apareix una altra alerta dient "que en pau descansi"
+                //Quan perd, apareix una imatge d'un moix fent voltes i una imate d'un diagrama del joc
                 if(vides<=0){
                     window.alert("i has perdut :(!");
                     document.getElementById("perdut").play();
@@ -68,9 +76,12 @@
                     document.getElementById("rotar").hidden=false;
                     document.getElementById("moix").hidden=true;
                     document.getElementById("ahorcado").hidden=false;
+                    document.getElementById("ahorcado0").hidden=true;
                     
                 }
                 //Feim una condició que diu que si la mida de la variable paraula és major o igual que 14, has guanyat i s'atura tot.
+                //Feim un so de haver guanyat i feim aparèixer un moix caminant 
+                //Apareix una foto del diagrama del joc
                 if (paraula.length >= 14){
                     document.getElementById("guanyat").play();
                     window.alert("i has guanyat!");
@@ -86,6 +97,7 @@
                     document.getElementById("button").disabled=true;
                 }
                 
+                //Amaga totes les imatges quan comença el joc excepte el moix principal
                 function Amagar(){
                     document.getElementById("ahorcado0").hidden= true;
                     document.getElementById("ahorcado1").hidden= true;
@@ -101,6 +113,7 @@
                         document.body.style.backgroundImage= "url('img/fondo1.png')";
                     }
                 }
+                //Apareixen les imatges segons ens lleven vides
                  function mostrarImg(){
                         switch (vides){
                     case 6:

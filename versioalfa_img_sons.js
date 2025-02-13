@@ -77,7 +77,7 @@
                     document.getElementById("moix").hidden=true;
                     document.getElementById("ahorcado").hidden=false;
                     document.getElementById("ahorcado0").hidden=true;
-                    document.body.style.backgroundImage= url ('img/img/Jungle.png');
+                    document.body.style.backgroundImage= "url('img/img/Jungle.png')";
                     
                 }
                 //Feim una condició que diu que si la mida de la variable paraula és major o igual que 14, has guanyat i s'atura tot.
@@ -90,7 +90,7 @@
                     document.getElementById("caminar").hidden=false;
                     document.getElementById("moix").hidden=true;
                     document.getElementById("ahorcado").hidden=false;
-                    document.body.style.backgroundImage= url('img/img/Party.png');
+                    document.body.style.backgroundImage= "url('img/img/Party.png')";
                 }
             }    
                 //Funció que desabilita <input id="lletra" i <button id="button"

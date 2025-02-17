@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>El Joc del Penjat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="estructures.js" type="text/javascript"></script>
+        <link href="estructures.css" rel="stylesheet" type="text/css"/>
+        <script>window.onkeypress=function(evObject){
+            if(evObject.KeyCode === 13){comprovar();}}</script>
+    </head>
+    <body onload="Amagar(); document.getElementById('mystery').play()" style="background-image: url('img/img/Desert.png');
+                                   background-size: 640px 480px;
+                                   background-repeat: no-repeat;">
+        <h1 translate="no">Versió Alpha Joc del Penjat</h1>
+        <label for="lletra"></label>
+        <input id="lletra" placeholder="Escriu una lletra minúscula" maxlength="1">
+        <button id="button" onclick="lletraCorrecta()">Comprova!</button>
+        
+        <button id="pista" onclick="mostrarpista()">Pista</button>
+        
+        <h2 id="counter">0</h2>
+        
+        <h2>Paraula</h2>
+        <p id="paraula">&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-</p>
+        
+        <h2>Vides</h2>
+        <div id="vides">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</div>
+        
+        <h2>Lletres</h2>
+        <div id="lletres">&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-</div>
+        
+        <p>Crèdits:<a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">
+        El joc del penjat on Scratch</a></p>
+        
+        <div id="idiomes">
+        <a href="https://spectacular-medovik-1df030.netlify.app/versioalfa_img_sons"
+           id="catala"> <img src="img/img/ca.png" title="En Català" alt=""/></a>
+        <a href= "https://spectacular--medovik--1df030-netlify-app.translate.goog/versioalfa_img_sons?_x_tr_sl=ca&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"
+           id="espanyol"><img src="img/img/es.png" alt=""/></a>
+        <a href="https://spectacular--medovik--1df030-netlify-app.translate.goog/versioalfa_img_sons?_x_tr_sl=ca&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=wapp"
+            id="frances"><img src="img/img/fr.png" alt=""/></a>
+        <a href="https://spectacular--medovik--1df030-netlify-app.translate.goog/versioalfa_img_sons?_x_tr_sl=ca&_x_tr_tl=gb&_x_tr_hl=gb&_x_tr_pto=wapp"
+           id="angles"><img src="img/img/gb.png" alt=""/></a>
+        <a href="https://spectacular--medovik--1df030-netlify-app.translate.goog/versioalfa_img_sons?_x_tr_sl=ca&_x_tr_tl=it&_x_tr_hl=it&_x_tr_pto=wapp"
+           id="italia"><img src="img/img/it.png" alt=""/></a>
+        <a href="https://spectacular--medovik--1df030-netlify-app.translate.goog/versioalfa_img_sons?_x_tr_sl=ca&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=wapp"
+           id="alemany"><img src="img/img/de.png" alt=""/></a>
+        </div>
+        <img id="moix" src="img/img/disfraz1.png" alt="" width="86" height="90"/>
+        <img id="caminar" src="img/img/caminar.gif" alt="" width="86" height="90"/>
+        <img id="rotar" src="img/img/rotar.gif" alt="" width="86" height="90"/>
+        <div id="imatges">
+        <img src="img/img/ahorcado_0.png"  alt="" 
+             id="ahorcado0"
+             width="300" height="295"/>
+        <img src="img/img/ahorcado_1.png" alt=""
+             id="ahorcado1"
+             width="280" height="270"/>
+        <img src="img/img/ahorcado_2.png" alt=""
+             id="ahorcado2"
+             width="280" height="270"/>
+        <img src="img/img/ahorcado_3.png" alt=""
+             id="ahorcado3"
+             width="280" height="270"/>
+        <img src="img/img/ahorcado_4.png" alt=""
+             id="ahorcado4"
+             width="280" height="270"/>
+        <img src="img/img/ahorcado_5.png" alt=""
+             id="ahorcado5"
+             width="280" height="270"/>
+        <img src="img/img/ahorcado_6.png" alt=""
+             id="ahorcado6"
+             width="280" height="270"/>
+        </div>
+        <img id="ahorcado" src="img/img/ahorcado.jpg" alt="" width="280" height="270"/>
+        <div id="sons">
+            <audio id="miau">
+                <source src="img/aud/miau.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="mystery">
+                <source src="img/mystery.mp3" type="audio/mpeg"> 
+            </audio>
+            <audio id="timer">
+                <source src="img/aud/clock_ticking.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="boom">
+                <source src="img/aud/boom_cloud.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="perdut">
+                <source src="img/aud/cat-fight.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="guanyat">
+                <source src="img/aud/cheer.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="campanes">
+                <source src="img/aud/bell_toll_x3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </body>
+</html>
+
+
+

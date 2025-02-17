@@ -2,11 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
- //Tres variables generals
-            var paraula= "";
+ //Variables generals
+            var paraula= [""];
             var vides = 7;
-            var lletres= "";
+            var lletres= ["_","_","_","_","_","_","_"];
             var seconds=0;
+ //Llista de paraules per al joc i les pistes associades
+            var paraules= ["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinta","setze"];
+            var pistes= ["A la quinta forca",
+                        "A ca un penjat, no hi anomenis cordes",
+                        "Setze jutges d'un jutjat mengen fetge d'un penjat"];
+            var paraulespistes= [1,2,0,2,2,2,1,0,2];
+ //Escull una paraula aleatòriament
+            var aleatori= Math.floor(Math.random()* paraules.length);
+            var paraula= paraules[aleatori];
+            var pista= pistes[paraulespistes[aleatori]];
+            function mostrarpista(){
+                window.alert(pista);
+            }
             //Ficam un temporitzador per veure quant de temps estàs al joc
 	    function timer(){
 		seconds=seconds+1;
@@ -45,6 +58,9 @@
                 //Feim que quan hem encertat soni una miulada
                 //Després fer sonar un clock
                 if((lletra >= "a") && (lletra <= "m")|| (lletra === "ç")){
+                    for (let i = 0; i < paraules.length; i++) {
+                    paraula += paraules[i] + "<br>";
+                    }
                     document.getElementById("miau").play();
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
@@ -112,7 +128,6 @@
                     document.getElementById("caminar").hidden=true;
                     document.getElementById("ahorcado").hidden=true;
                     document.getElementById("party").hidden=true;
-                    window.alert("amagar");
                     if (!confirm('Anam a la quinta forca?')){
                         document.body.style.backgroundImage= "url('img/img/fondo1.png')";
                     }

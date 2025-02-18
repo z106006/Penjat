@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
  //Variables generals
-            var paraula= [""];
+            var paraula= [];
+            document.body.style.display="block";
             var vides = 7;
             var lletres= ["_","_","_","_","_","_","_"];
             var seconds=0;
@@ -15,8 +16,13 @@
             var paraulespistes= [1,2,0,2,2,2,1,0,2];
  //Escull una paraula aleatòriament
             var aleatori= Math.floor(Math.random()* paraules.length);
-            var paraula= paraules[aleatori];
+            var Paraula= paraules[aleatori];
             var pista= pistes[paraulespistes[aleatori]];
+            
+            for (let i = 0; i < paraules.length; i++) {
+                paraula[i]= "_";
+            }
+            //Fucnió per mostrar una pista aleatòria
             function mostrarpista(){
                 window.alert(pista);
             }
@@ -57,10 +63,7 @@
                 //Cream una condicional que si la lletra està dins l'interval és correcta i si no està dins, és incorrecta.
                 //Feim que quan hem encertat soni una miulada
                 //Després fer sonar un clock
-                if((lletra >= "a") && (lletra <= "m")|| (lletra === "ç")){
-                    for (let i = 0; i < paraules.length; i++) {
-                    paraula += paraules[i] + "<br>";
-                    }
+                if(paraules.includes(lletra)===true){
                     document.getElementById("miau").play();
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";

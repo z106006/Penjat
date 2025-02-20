@@ -4,22 +4,22 @@
  */
  //Variables generals
             var paraula= [];
-            document.body.style.display="block";
             var vides = 7;
             var lletres= ["_","_","_","_","_","_","_"];
             var seconds=0;
+            var posicio = paraula.indexOf(lletra);
  //Llista de paraules per al joc i les pistes associades
             var paraules= ["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinta","setze"];
             var pistes= ["A la quinta forca",
                         "A ca un penjat, no hi anomenis cordes",
                         "Setze jutges d'un jutjat mengen fetge d'un penjat"];
             var paraulespistes= [1,2,0,2,2,2,1,0,2];
- //Escull una paraula aleatòriament
+            //Escull una paraula aleatòriament
             var aleatori= Math.floor(Math.random()* paraules.length);
             var Paraula= paraules[aleatori];
             var pista= pistes[paraulespistes[aleatori]];
-            
-            for (let i = 0; i < paraules.length; i++) {
+            //Nombre de guions segons la lletra
+            for (let i = 0; i < Paraula.length; i++) {
                 paraula[i]= "_";
             }
             //Fucnió per mostrar una pista aleatòria
@@ -63,7 +63,7 @@
                 //Cream una condicional que si la lletra està dins l'interval és correcta i si no està dins, és incorrecta.
                 //Feim que quan hem encertat soni una miulada
                 //Després fer sonar un clock
-                if(paraules.includes(lletra)===true){
+                if(m){
                     document.getElementById("miau").play();
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
@@ -134,6 +134,8 @@
                     if (!confirm('Anam a la quinta forca?')){
                         document.body.style.backgroundImage= "url('img/img/fondo1.png')";
                     }
+                    document.getElementById(paraula).innerHTML=paraula;
+                    document.body.style.display="block";
                 }
                 //Apareixen les imatges segons ens lleven vides
                  function mostrarImg(){

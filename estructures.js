@@ -7,7 +7,6 @@
             var vides = 7;
             var lletres= ["_","_","_","_","_","_","_"];
             var seconds=0;
-            var posicio = paraula.indexOf(lletra);
  //Llista de paraules per al joc i les pistes associades
             var paraules= ["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinta","setze"];
             var pistes= ["A la quinta forca",
@@ -171,6 +170,7 @@
                       break;
                     }
                 }
+                 var posicio = paraula.indexOf(lletra);
                 
                 
                    

@@ -15,7 +15,7 @@
                         "Setze jutges d'un jutjat mengen fetge d'un penjat"];
             var paraulespistes= [1,2,0,2,2,2,1,0,2];
             //Escull una paraula aleatòriament
-            var aleatori= Math.floor(Math.random()* paraules.length);
+            var aleatori= Math.floor(Math.random * paraules.length);
             var Paraula= paraules[aleatori];
             var pista= pistes[paraulespistes[aleatori]];
             //Nombre de guions segons la lletra
@@ -63,7 +63,7 @@
                 //Cream una condicional que si la lletra està dins l'interval és correcta i si no està dins, és incorrecta.
                 //Feim que quan hem encertat soni una miulada
                 //Després fer sonar un clock
-                if(m){
+                if(true){
                     document.getElementById("miau").play();
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
@@ -120,6 +120,8 @@
                 
                 //Amaga totes les imatges quan comença el joc excepte el moix principal
                 function Amagar(){
+                    alert(paraules);
+                    alert(pistes);
                     document.getElementById("ahorcado0").hidden= true;
                     document.getElementById("ahorcado1").hidden= true;
                     document.getElementById("ahorcado2").hidden= true;

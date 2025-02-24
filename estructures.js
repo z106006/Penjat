@@ -4,8 +4,10 @@
  */
  //Variables generals
             var paraula= [];
+            paraula[posicio]=lletres;
             var vides = 7;
             var lletres= ["_","_","_","_","_","_","_"];
+            lletres[7-vides]=lletra;
             var seconds=0;
  //Llista de paraules per al joc i les pistes associades
             var paraules= ["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinta","setze"];
@@ -14,11 +16,11 @@
                         "Setze jutges d'un jutjat mengen fetge d'un penjat"];
             var paraulespistes= [1,2,0,2,2,2,1,0,2];
             //Escull una paraula aleatòriament
-            var aleatori= Math.floor(Math.random * paraules.length);
+            var aleatori= Math.floor(Math.random() * paraules.length);
             var Paraula= paraules[aleatori];
             var pista= pistes[paraulespistes[aleatori]];
             //Nombre de guions segons la lletra
-            for (let i = 0; i < Paraula.length; i++) {
+            for (var i = 0; i < Paraula.length; i++) {
                 paraula[i]= "_";
             }
             //Fucnió per mostrar una pista aleatòria
@@ -62,7 +64,7 @@
                 //Cream una condicional que si la lletra està dins l'interval és correcta i si no està dins, és incorrecta.
                 //Feim que quan hem encertat soni una miulada
                 //Després fer sonar un clock
-                if(true){
+                if (paraula.includes(lletres)){
                     document.getElementById("miau").play();
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
@@ -119,8 +121,7 @@
                 
                 //Amaga totes les imatges quan comença el joc excepte el moix principal
                 function Amagar(){
-                    alert(paraules);
-                    alert(pistes);
+                    alert(aleatori + ", " + paraules.length);
                     document.getElementById("ahorcado0").hidden= true;
                     document.getElementById("ahorcado1").hidden= true;
                     document.getElementById("ahorcado2").hidden= true;
@@ -170,7 +171,7 @@
                       break;
                     }
                 }
-                 var posicio = paraula.indexOf(lletra);
+                 var posicio = Paraula.indexOf(lletra);
                 
                 
                    

@@ -4,10 +4,8 @@
  */
  //Variables generals
             var paraula= [];
-            paraula[posicio]=lletres;
             var vides = 7;
             var lletres= ["_","_","_","_","_","_","_"];
-            lletres[7-vides]=lletra;
             var seconds=0;
  //Llista de paraules per al joc i les pistes associades
             var paraules= ["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinta","setze"];
@@ -64,7 +62,7 @@
                 //Cream una condicional que si la lletra està dins l'interval és correcta i si no està dins, és incorrecta.
                 //Feim que quan hem encertat soni una miulada
                 //Després fer sonar un clock
-                if (paraula.includes(lletres)){
+                if (paraula.includes(lletra)){
                     document.getElementById("miau").play();
                     window.alert("Has encertat!");
                     paraula = paraula + lletra + " ";
@@ -121,7 +119,7 @@
                 
                 //Amaga totes les imatges quan comença el joc excepte el moix principal
                 function Amagar(){
-                    alert(aleatori + ", " + paraules.length);
+                    alert(Paraula);
                     document.getElementById("ahorcado0").hidden= true;
                     document.getElementById("ahorcado1").hidden= true;
                     document.getElementById("ahorcado2").hidden= true;

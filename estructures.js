@@ -62,20 +62,21 @@
                 //Cream una condicional que si la lletra està dins l'interval és correcta i si no està dins, és incorrecta.
                 //Feim que quan hem encertat soni una miulada
                 //Després fer sonar un clock
-                if (paraula.includes(lletra)){
-                    document.getElementById("miau").play();
-                    window.alert("Has encertat!");
-                    paraula = paraula + lletra + " ";
-                    document.getElementById("paraula").innerHTML= paraula;
-                    document.getElementById("timer").play();
+                   if (Paraula.includes(lletra)){
+                     document.getElementById("miau").play();
+                     window.alert("Has encertat!");
+                     var pos = Paraula.indexOf(lletra);
+                     paraula[pos]=lletra;
+                     document.getElementById("paraula").innerHTML= paraula;
+                     document.getElementById("timer").play();
                     
                 //Fer sonar un boom si has fallat
                 //Després fer sonar un clock
                 }else{
                     document.getElementById("boom").play();
                     window.alert("Has fallat!");
-                    lletres = lletres + lletra + " ";
                     document.getElementById("lletres").innerHTML= lletres;
+                    lletres[7-vides]=lletra;
                     vides = vides - 1;
                     document.getElementById("vides").innerHTML= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
                     mostrarImg();
@@ -169,7 +170,6 @@
                       break;
                     }
                 }
-                 var posicio = Paraula.indexOf(lletra);
                 
                 
                    

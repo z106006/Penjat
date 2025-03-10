@@ -62,13 +62,17 @@
                 //Cream una condicional que si la lletra està dins l'interval és correcta i si no està dins, és incorrecta.
                 //Feim que quan hem encertat soni una miulada
                 //Després fer sonar un clock
-                   if (Paraula.includes(lletra)){
-                     document.getElementById("miau").play();
-                     window.alert("Has encertat!");
-                     var pos = Paraula.indexOf(lletra);
-                     paraula[pos]=lletra;
-                     document.getElementById("paraula").innerHTML= paraula;
-                     document.getElementById("timer").play();
+                    if (Paraula.includes(lletra)){
+                        document.getElementById("miau").play();
+                        window.alert("Has encertat!");
+                        var pos = Paraula.indexOf(lletra);
+                        for(var i = 0; i < Paraula.length; i++){
+                            if(Paraula[i]===lletra)
+                                paraula[i]=lletra;
+                        }
+                        paraula[pos]=lletra;
+                        document.getElementById("paraula").innerHTML= paraula;
+                        document.getElementById("timer").play();
                     
                 //Fer sonar un boom si has fallat
                 //Després fer sonar un clock
@@ -102,7 +106,7 @@
                 //Feim una condició que diu que si la mida de la variable paraula és major o igual que 14, has guanyat i s'atura tot.
                 //Feim un so de haver guanyat i feim aparèixer un moix caminant 
                 //Apareix una foto del diagrama del joc
-                if (paraula.length >= 14){
+                if (paraula.indexOf("_")=== -1){
                     document.getElementById("guanyat").play();
                     window.alert("i has guanyat!");
                     Aturatot();

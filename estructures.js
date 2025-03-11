@@ -124,7 +124,6 @@
                 
                 //Amaga totes les imatges quan comença el joc excepte el moix principal
                 function Amagar(){
-                    alert(Paraula);
                     document.getElementById("ahorcado0").hidden= true;
                     document.getElementById("ahorcado1").hidden= true;
                     document.getElementById("ahorcado2").hidden= true;
@@ -136,10 +135,9 @@
                     document.getElementById("caminar").hidden=true;
                     document.getElementById("ahorcado").hidden=true;
                     document.getElementById("party").hidden=true;
-                    if (!confirm('Anam a la quinta forca?')){
+                    if(!confirm ('Anam a la quinta forca?/¿Vamos al quinto pino?/Let s go to miles away from here?')){
                         document.body.style.backgroundImage= "url('img/img/fondo1.png')";
                     }
-                    document.getElementById(paraula).innerHTML=paraula;
                     document.body.style.display="block";
                 }
                 //Apareixen les imatges segons ens lleven vides

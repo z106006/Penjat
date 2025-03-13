@@ -17,10 +17,7 @@
             var aleatori= Math.floor(Math.random() * paraules.length);
             var Paraula= paraules[aleatori];
             var pista= pistes[paraulespistes[aleatori]];
-            //Nombre de guions segons la lletra
-            for (var i = 0; i < Paraula.length; i++) {
-                paraula[i]= "_";
-            }
+            
             //Fucnió per mostrar una pista aleatòria
             function mostrarpista(){
                 window.alert(pista);
@@ -124,6 +121,11 @@
                 
                 //Amaga totes les imatges quan comença el joc excepte el moix principal
                 function Amagar(){
+                    //Nombre de guions segons la lletra
+                    for (var i = 0; i < Paraula.length; i++) {
+                        paraula[i]= "_";
+                    }
+                    document.getElementById("paraula").innerHTML;
                     document.getElementById("ahorcado0").hidden= true;
                     document.getElementById("ahorcado1").hidden= true;
                     document.getElementById("ahorcado2").hidden= true;

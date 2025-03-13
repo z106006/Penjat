@@ -14,6 +14,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 #ahorcado{ position:relative; top:-400px; left:318px;}
 #Teclat{position: relative; top: -190px; left: 250px}
 #teclat{position: relative; top: -450px; left: 555px}
+#on{position: relative; top: -400px; left: 510px}
+#off{position: relative; top: -400px; left: 510px}
+#sons{position: relative; top: -400px; left: 510px}
 html {
         background:#222;
         margin:0;

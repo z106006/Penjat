@@ -96,7 +96,7 @@
                     document.getElementById("rotar").hidden=false;
                     document.getElementById("moix").hidden=true;
                     document.getElementById("ahorcado").hidden=false;
-                    document.getElementById("ahorcado0").hidden=true;
+                    document.getElementById("ahorcado_0").hidden=true;
                     document.body.style.backgroundImage= "url('img/img/Jungle.png')";
                     
                 }
@@ -110,6 +110,7 @@
                     document.getElementById("caminar").hidden=false;
                     document.getElementById("moix").hidden=true;
                     document.getElementById("ahorcado").hidden=false;
+                    document.getElementById("imatges").hidden=true
                     document.body.style.backgroundImage= "url('img/img/Party.png')";
                 }
             }    
@@ -121,56 +122,56 @@
                 
                 //Amaga totes les imatges quan comença el joc excepte el moix principal
                 function Amagar(){
-                    //Nombre de guions segons la lletra
-                    for (var i = 0; i < Paraula.length; i++) {
-                        paraula[i]= "_";
-                    }
-                    document.getElementById("paraula").innerHTML;
-                    document.getElementById("ahorcado0").hidden= true;
-                    document.getElementById("ahorcado1").hidden= true;
-                    document.getElementById("ahorcado2").hidden= true;
-                    document.getElementById("ahorcado3").hidden= true;
-                    document.getElementById("ahorcado4").hidden= true;
-                    document.getElementById("ahorcado5").hidden= true;
-                    document.getElementById("ahorcado6").hidden= true;
+                    document.getElementById("ahorcado_0").hidden=true;
+                    document.getElementById("ahorcado_1").hidden=true;
+                    document.getElementById("ahorcado_2").hidden=true;
+                    document.getElementById("ahorcado_3").hidden=true;
+                    document.getElementById("ahorcado_4").hidden=true;
+                    document.getElementById("ahorcado_5").hidden=true;
+                    document.getElementById("ahorcado_6").hidden=true;
                     document.getElementById("rotar").hidden=true;
                     document.getElementById("caminar").hidden=true;
                     document.getElementById("ahorcado").hidden=true;
-                    document.getElementById("party").hidden=true;
-                    if(!confirm ('Anam a la quinta forca?/¿Vamos al quinto pino?/Let s go to miles away from here?')){
-                        document.body.style.backgroundImage= "url('img/img/fondo1.png')";
+                    
+                  //Nombre de guions segons la lletra
+                    for(var i = 0; i < Paraula.length; i++){
+                      paraula[i]="_";
                     }
-                    document.body.style.display="block";
+                    
+                    if(!confirm("Anam a la quinta forca?/¿Vamos al quinto pino?/Let's go to the boondocks?")){
+                        document.body.style.backgroundImage= "url('img/img/fondo1.png')";
+                        document.body.style.display="block";
+                    }
                 }
                 //Apareixen les imatges segons ens lleven vides
                  function mostrarImg(){
                         switch (vides){
                     case 6:
-                        document.getElementById("ahorcado6").hidden=false;
+                        document.getElementById("ahorcado_6").hidden=false;
                       break;
                     case 5:
-                        document.getElementById("ahorcado6").hidden=true;
-                        document.getElementById("ahorcado5").hidden=false;
+                        document.getElementById("ahorcado_6").hidden=true;
+                        document.getElementById("ahorcado_5").hidden=false;
                       break;
                     case 4:
-                        document.getElementById("ahorcado5").hidden=true;
-                        document.getElementById("ahorcado4").hidden=false;
+                        document.getElementById("ahorcado_5").hidden=true;
+                        document.getElementById("ahorcado_4").hidden=false;
                       break;
                     case 3:
-                        document.getElementById("ahorcado4").hidden=true;
-                        document.getElementById("ahorcado3").hidden=false;
+                        document.getElementById("ahorcado_4").hidden=true;
+                        document.getElementById("ahorcado_3").hidden=false;
                       break;
                     case 2:
-                        document.getElementById("ahorcado3").hidden=true;
-                        document.getElementById("ahorcado2").hidden=false;
+                        document.getElementById("ahorcado_3").hidden=true;
+                        document.getElementById("ahorcado_2").hidden=false;
                       break;
                     case 1:
-                        document.getElementById("ahorcado2").hidden=true;
-                        document.getElementById("ahorcado1").hidden=false;
+                        document.getElementById("ahorcado_2").hidden=true;
+                        document.getElementById("ahorcado_1").hidden=false;
                       break;
                     case 0:
-                        document.getElementById("ahorcado1").hidden=true;
-                        document.getElementById("ahorcado0").hidden=false;
+                        document.getElementById("ahorcado_1").hidden=true;
+                        document.getElementById("ahorcado_0").hidden=false;
                       break;
                     }
                 }

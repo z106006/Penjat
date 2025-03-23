@@ -6,17 +6,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Created on : 27 de gen. 2025, 14:20:01
     Author     : aula1PTD1
 */
-#moix{ position:relative; top:-200px; left:300px}
-#caminar{position:relative; top:-400px; left:318px}
-#rotar{position:relative; top:-400px; left:318px}
-#imatges{ position:relative; top:-450px; left:318px;}
-#idiomes{ position: relative; top: -390px; left: 400px;}
-#ahorcado{ position:relative; top:-400px; left:318px;}
-#Teclat{position: relative; top: -190px; left: 250px}
-#teclat{position: relative; top: -450px; left: 555px}
-#on{position: relative; top: -400px; left: 510px}
-#off{position: relative; top: -400px; left: 510px}
-#sons{position: relative; top: -400px; left: 510px}
+#moix{ position:relative; top:-380px; left:300px}
+#caminar{position:relative; top:-650px; left:318px}
+#rotar{position:relative; top:-470px; left:318px}
+#imatges{ position:relative; top:-640px; left:318px;}
+#idiomes{ position: relative; top: -560px; left: 400px;}
+#ahorcado{ position:relative; top:-470px; left:318px;}
+#Teclat{position: relative; top: -380px; left: 250px}
+#teclat{position: relative; top: -615px; left: 555px}
+#on{position: relative; top: -500px; left: 510px}
+#off{position: relative; top: -500px; left: 510px}
+#sons{position: relative; top: -570px; left: 510px}
+#lletresencertades{position: relative; top: -20px; left: 0px;}
+#demanessopes{position: relative; top: -60px;left: 90px;}
+#paraula{position: relative;top: -70px;left:0px ;}
+#titolvides{position: relative;top: -70px;left: 0px;}
+#vides{position: relative;top: -90px;left: 0px;}
+#moix7{position: relative;top: -110px;left: 65px;}
+#lletresfallades{position: relative;top: -100px;left: 0px;}
+#etsdelletres{position: relative;top: -140px;left: 80px;}
+#lletres{position: relative;top: -120px;left: 0px;}
+#credits{position: relative;top: -110px;left: 0px;}
+#yt{position: relative;top: -110px; left: 0px;;}
+#dites{position: relative;top: -110px; left: 0px;}
+#wikis{position: relative;top: -145px; left: 250px;}
+
 html {
         background:#222;
         margin:0;

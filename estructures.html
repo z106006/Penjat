@@ -16,7 +16,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     <body onload="Amagar(); document.getElementById('mystery').play()" style="background-image: url('img/img/Desert.png');
                                    background-size: 640px 480px;
                                    background-repeat: no-repeat;">
-        <h1 translate="no">Versió Beta Joc del Penjat</h1>
+        <h1 translate="no">Versió β Joc del Penjat</h1>
         <label for="lletra"></label>
         <input id="lletra" placeholder="Escriu una lletra minúscula" maxlength="1">
         <button id="button" onclick="lletraCorrecta()">Comprova!</button>
@@ -25,18 +25,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         
         <h2 id="counter">0</h2>
         
-        <h2>Paraula</h2>
+        <div id="lletresencertades"><h2>Paraula:</h2></div><div id="demanessopes"><a href="https://prosselloe.wordpress.com/2015/05/16/vols-sopes-en-record-dels-nostres-padrins/">Demanes sopes?</a></div>
         <p id="paraula">&nbsp;_&nbsp;_&nbsp;_&nbsp;_&nbsp;_&nbsp;_&nbsp;_</p>
         
-        <h2>Vides</h2>
+       <div id="titolvides"><h2>Vides:</h2></div><div id="moix7"><a href="https://pccd.dites.cat/p/Tenir_set_vides%2C_com_els_gats">Un moix en té set?</a></div>
         <div id="vides">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</div>
         
-        <h2>Lletres</h2>
+        <div id="lletresfallades"><h2>Lletres:</h2></div><div id="etsdelletres"><a href="https://pccd.dites.cat/p/De_lletres">Ets de lletres?</a></div>
         <div id="lletres">&nbsp;_&nbsp;_&nbsp;_&nbsp;_&nbsp;_&nbsp;_&nbsp;_</div>
         
-        <p>Crèdits:<a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">
-        El joc del penjat on Scratch</a></p>
-        <p>YouTube:<a href="https://youtu.be/v53rEMHghJU?list=PLv1JHCp6B60w_KnMTu7jDdlDZ6Z0-WJ-j">Joc Penjat on Scratch</a></p>
+        <div id="credits"><p>Crèdits:<a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">
+        El joc del penjat on Scratch</a></p></div>
+        <div id="yt"><p>YouTube:<a href="https://youtu.be/v53rEMHghJU?list=PLv1JHCp6B60w_KnMTu7jDdlDZ6Z0-WJ-j">Joc Penjat on Scratch</a></p></div>
+        <div id="dites"><p>URL Pistes:<a href="https://pccd.dites.cat/p/A_la_quinta_forca">Dita 1</a>
+                                      <a href="https://pccd.dites.cat/p/A_ca_un_penjat%2C_no_hi_anomenis_cordes">Dita 2</a>
+                                      <a href="https://pccd.dites.cat/p/Setze_jutges_d%27un_jutjat_mengen_fetge_d%27un_penjat">Dita 3</a></p></div>
+        <div id="wikis"><p>Wikis:<a href="https://ca.wikipedia.org/wiki/Penjat">Penjat</a>
+                                 <a href="https://es.wikipedia.org/wiki/Ahorcado_(juego)">Ahorcado</a>
+                                 <a href="https://en.wikipedia.org/wiki/Hangman_(game)">Hangman</a></p></div>    
         
         <div id="idiomes">
         <a href="https://spectacular-medovik-1df030.netlify.app/versioalfa_img_sons"
@@ -59,8 +65,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         
         <button id="sons" title="On/Off" 
                 onclick="document.getElementById('off').hidden=
-                         document.getElementById('on').hidden;
-                         document.getElementById('on').hidden=
+                         document.getElementById('on').hidden;"
+                onclick="document.getElementById('on').hidden=
                          !document.getElementById('off').hidden;">
         <img id="on" src="img/img/on.png" alt="" width="30" height="30"/>
         <img id="off" src="img/img/off.png" alt="" width="30" height="30" hidden/>
@@ -70,25 +76,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <img id="rotar" src="img/img/rotar.gif" alt="" width="86" height="90"/>
         <div id="imatges">
         <img src="img/img/ahorcado_0.png"  alt="" 
-             id="ahorcado0"
+             id="ahorcado_0"
              width="300" height="295"/>
         <img src="img/img/ahorcado_1.png" alt=""
-             id="ahorcado1"
+             id="ahorcado_1"
              width="280" height="270"/>
         <img src="img/img/ahorcado_2.png" alt=""
-             id="ahorcado2"
+             id="ahorcado_2"
              width="280" height="270"/>
         <img src="img/img/ahorcado_3.png" alt=""
-             id="ahorcado3"
+             id="ahorcado_3"
              width="280" height="270"/>
         <img src="img/img/ahorcado_4.png" alt=""
-             id="ahorcado4"
+             id="ahorcado_4"
              width="280" height="270"/>
         <img src="img/img/ahorcado_5.png" alt=""
-             id="ahorcado5"
+             id="ahorcado_5"
              width="280" height="270"/>
         <img src="img/img/ahorcado_6.png" alt=""
-             id="ahorcado6"
+             id="ahorcado_6"
              width="280" height="270"/>
         </div>
         <img id="ahorcado" src="img/img/ahorcado.jpg" alt="" width="280" height="270"/>

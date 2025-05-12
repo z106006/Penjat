@@ -331,10 +331,12 @@
             // Recuperam de la base de dades els TextosGUI per tots els Idiomes
             alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
                     SELECT * FROM TblTextosGUI;',
-                [], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
-            //    [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
+            //    [], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
+                [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
             );
             }   
+
+            function SQL_TblTextosGUI(IdIdioma, IdIdioma1) {}
 
             // Print data  
             function Print_Data(res) {
@@ -352,17 +354,21 @@
             function CanviarIdioma(IdIdioma){
                 AlaWeb_SQLite(IdIdioma);
                 Idioma=Idiomes.find(Idioma=>Idioma.IdIdioma===IdIdioma);
-                document.title = Idioma.Títol;
-                document.getElementById("Versió").innerHTML=Idioma.Versió;
-                document.getElementById("lletra").innerHTML=Idioma.lletra;
-                document.getElementById("comprovar").innerHTML=Idioma.comprovar;
-                document.getElementById("Paraula").innerHTML=Idioma.Paraula;
-                document.getElementById("Sopes").innerHTML=Idioma.Sopes;
-                document.getElementById("pista").innerHTML=Idioma.pista;
-                document.getElementById("Vides").innerHTML=Idioma.Vides;
-                document.getElementById("Moix").innerHTML=Idioma.Moix;
-                document.getElementById("Lletres").innerHTML=Idioma.Lletres;
+                document.title = Idioma.Títol;               
+                document.getElementById("Versio").innerHTML=Idioma.Versio;
+                //document.getElementById("lletra").innerHTML=Idioma.lletra;
+                //document.getElementById("buttom").innerHTML=Idioma.Comprovar;
+                
+                document.getElementById("lletresencertades").innerHTML=Idioma.Paraula;
+                document.getElementById("demanessopes").innerHTML=Idioma.Sopes;
+                //document.getElementById("pista").innerHTML=Idioma.pista;
+                document.getElementById("titolvides").innerHTML=Idioma.Vides;
+                //document.getElementById("Moix").innerHTML=Idioma.Moix;
+                document.getElementById("lletresfallades").innerHTML=Idioma.Lletres;
+                
+                 
+                
+            //Escull una nova paraula aleatòriament
+            window.alert("Nova paraula aleatòria/Nueva palabra aleatoria/New random word");                
             }
 
-            //Escull una nova paraula aleatòriament
-            window.alert("Nova paraula aleatòria/Nueva palabra aleatoria/New random word");

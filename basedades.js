@@ -356,16 +356,22 @@
                 Idioma=Idiomes.find(Idioma=>Idioma.IdIdioma===IdIdioma);
                 document.title = Idioma.Títol;               
                 document.getElementById("Versio").innerHTML=Idioma.Versio;
-                //document.getElementById("lletra").innerHTML=Idioma.lletra;
-                //document.getElementById("buttom").innerHTML=Idioma.Comprovar;
-                
+                document.getElementById("etsdelletres").innerHTML=Idioma.Ets;
+                document.getElementById("button").innerHTML=Idioma.Comprovar;
                 document.getElementById("lletresencertades").innerHTML=Idioma.Paraula;
                 document.getElementById("demanessopes").innerHTML=Idioma.Sopes;
-                //document.getElementById("pista").innerHTML=Idioma.pista;
+                document.getElementById("pista").innerHTML=Idioma.Pista;
                 document.getElementById("titolvides").innerHTML=Idioma.Vides;
-                //document.getElementById("Moix").innerHTML=Idioma.Moix;
+                document.getElementById("moix7").innerHTML=Idioma.Moix;
                 document.getElementById("lletresfallades").innerHTML=Idioma.Lletres;
-                
+                document.getElementById("lletra").innerHTML=Idioma.Input;
+                document.getElementById("dita1").innerHTML=Idioma.Dita1;
+                document.getElementById("dita2").innerHTML=Idioma.Dita2;
+                document.getElementById("dita3").innerHTML=Idioma.Dita3;
+                document.getElementById("dites").innerHTML=Idioma.URLpistes;
+                //document.getElementById("Versio").innerHTML=Idioma.Versio;
+                //document.getElementById("Versio").innerHTML=Idioma.Versio;
+
                  
                 
             //Escull una nova paraula aleatòriament

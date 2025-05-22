@@ -365,15 +365,6 @@
                 document.getElementById("moix7").innerHTML=Idioma.Moix;
                 document.getElementById("lletresfallades").innerHTML=Idioma.Lletres;
                 document.getElementById("lletra").innerHTML=Idioma.Input;
-                document.getElementById("dita1").innerHTML=Idioma.Dita1;
-                document.getElementById("dita2").innerHTML=Idioma.Dita2;
-                document.getElementById("dita3").innerHTML=Idioma.Dita3;
-                document.getElementById("dites").innerHTML=Idioma.URLpistes;
-                document.getElementById("credits").innerHTML=Idioma.Credits;
-                document.getElementById("yt").innerHTML=Idioma.Youtube;
-                document.getElementById("wikis").innerHTML=Idioma.Wikis;
-                document.getElementById("idiomes").innerHTML=Idioma.Idioma;
-                document.getElementById("teclat").innerHTML=Idioma.Teclat;
                 
             //Escull una nova paraula aleatòriament
             window.alert("Nova paraula aleatòria/Nueva palabra aleatoria/New random word");                
